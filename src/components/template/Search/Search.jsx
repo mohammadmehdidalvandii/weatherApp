@@ -30,6 +30,7 @@ function Search() {
         localStorage.setItem("forecastData" , JSON.stringify(forecastData))
         setIsLoading(false);
       }
+      setCity("")
       }else{
         setIsLoading(false)
         swal({
