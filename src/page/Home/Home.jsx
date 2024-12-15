@@ -1,8 +1,10 @@
-import React from 'react'
+import Search from '../../components/template/Search/Search'
 
 function Home() {
   return (
-    <div>Home</div>
+    <>
+    <Search/>
+    </>
   )
 }
 

@@ -27,6 +27,7 @@
     --green-100: #16A34A;
     --blue-100: #0EA5E9;
     --blue-200: #0284C7;
+    --gary-100 : #8D94A0;
 }
 
 /* <<<< Body >>>> */
@@ -58,4 +59,12 @@ body {
     position: fixed;
     background-color: rgba(0,0,0,0.7);
     backdrop-filter: blur(2px);
+}
+/* <<<< Box >>>> */
+.box{
+    display: block;
+    width: 100%;
+    background-color: var(--success);
+    padding: 1rem;
+    border-radius: 0.6rem;
 }
