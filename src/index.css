@@ -1,0 +1,61 @@
+/* <<<< Import File Font >>>> */
+@font-face {
+    font-family: "danaBlack";
+    src: url('/public/assets/font/Dana-Black.woff') format(woff);
+}
+@font-face {
+    font-family: "danaBold";
+    src: url('/public/assets/font/Dana-Bold.woff') format(woff);
+}
+@font-face {
+    font-family: "danaMedium";
+    src: url('/public/assets/font/Dana-Medium.woff') format(woff);
+}
+
+/* <<<< Root variable >>>> */
+:root{
+    --danaMedium : "danaMedium";
+    --danaBold : "danaBold";
+    --danaMedium : "danaMedium";
+
+    --white: #ffffff;
+    --bg-color: #1C1C28;
+    --shadow: #2F3542;
+    --primary: #4E81FB;
+    --secondary: #2ED563;
+    --success: #28293D;
+    --green-100: #16A34A;
+    --blue-100: #0EA5E9;
+    --blue-200: #0284C7;
+}
+
+/* <<<< Body >>>> */
+body {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--danaMedium);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--white);
+    background-color: var(--bg-color);
+}
+
+/* <<<< Container >>>> */
+.container{
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+/* <<<< Shadow >>>> */
+.shadow{
+    display: block;
+    width: 100%;
+    height: 100dvh;
+    position: fixed;
+    background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(2px);
+}
