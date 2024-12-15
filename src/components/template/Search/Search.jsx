@@ -46,10 +46,12 @@ function Search() {
     <section className="search">
         <div className="container">
             <div className="box">
+              <div className="search_buttons">
                 <button className="search_btn" 
                 onClick={handlerSearchCity}
                 >Search</button>
                 <button className="search_btn">Get Location</button>
+              </div>
                 <input type="text" className="search_input"
                 value={city}
                 onChange={e=>setCity(e.target.value)}

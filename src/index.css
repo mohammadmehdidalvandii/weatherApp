@@ -64,7 +64,7 @@ body {
 /* <<<< Box >>>> */
 .box{
     display: block;
-    width: 100%;
+    max-width: 100%;
     background-color: var(--success);
     padding: 1rem;
     border-radius: 0.6rem;
