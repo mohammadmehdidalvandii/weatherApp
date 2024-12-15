@@ -1,0 +1,15 @@
+.header{
+    display: block;
+    width: 100%;
+}
+.header_title{
+    display: block;
+    width: 100%;
+    text-align: center  ;
+    font-family: var(--danaBlack);
+    font-size: 2.5rem;
+    color: var(--secondary);
+}
+.header_title span{
+    color: var(--primary);
+}
