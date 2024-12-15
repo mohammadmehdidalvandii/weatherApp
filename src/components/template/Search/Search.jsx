@@ -9,16 +9,24 @@ function Search() {
   const key_api = "e71388857ca1f6798e51fed62c6c3a39";
 
   const handlerSearchCity = async ()=>{
+    if (!city) {
+      swal({
+          title: "Please enter a city name",
+          icon: "warning",
+          buttons: "OK",
+      });
+      return; // جلوگیری از ادامه تابع
+  }
     setIsLoading(true);
-    const res = await  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key_api}&units=metric`)
+     const res = await  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key_api}&units=metric`)
     if(res.status === 200){
       const weatherData = await res.json();
-      const {lat , lon} =weatherData
+      const {lat , lon} = weatherData.coord
       localStorage.setItem("weatherData", JSON.stringify(weatherData))
 
-      const forecast = await fetch( `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key_api}&units=metric`)
+      const forecast = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key_api}&units=metric`)
       if(forecast.status === 200 ){
-        const forecastData = await res.json();
+        const forecastData = await forecast.json();
         localStorage.setItem("forecastData" , JSON.stringify(forecastData))
         setIsLoading(false);
       }
