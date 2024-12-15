@@ -27,7 +27,7 @@ function Search() {
         swal({
           title:"This city does not exist",
           icon:"error",
-          buttons:"try",
+          buttons:"try again",
         })
     }
     // console.log(`http://openweathermap.org/img/wn/${res.data.weather[0].icon}.png`)

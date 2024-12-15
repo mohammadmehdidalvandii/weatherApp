@@ -69,3 +69,26 @@ body {
     padding: 1rem;
     border-radius: 0.6rem;
 }
+/* <<<< style custom swal >>>> */
+.swal-modal{
+    background-color: var(--shadow);
+}
+.swal-title{
+    color: var(--white);
+}
+.swal-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background-color: var(--secondary);
+   
+}
+.swal-button:not([disabled]):hover {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background-color: var(--green-100);
+}
