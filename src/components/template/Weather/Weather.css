@@ -1,0 +1,145 @@
+.weather{
+    display: block;
+    width: 100%;
+}
+.box_weather{
+    display: block !important;
+}
+.weather_removed{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.4rem;
+    background-color: rgba(255, 0, 0, 0.9);
+    color: var(--white);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.4s linear;
+    &:hover{
+        background-color: rgba(255, 0, 0, 0.7);
+    }
+}
+.weather_wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.weather_info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.weather_info_img{
+    width: 130px;
+    object-fit: cover;
+}
+.weather_info_content{
+    display: block;
+    text-align: center;
+}
+.weather_info_city,
+.weather_info_sky,
+.weather_info_temp{
+display: block;
+margin-bottom: 1rem;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 1.1rem;
+font-weight: 700;
+}
+
+.weather_info_temp{
+display: block;
+    margin-bottom: 0;
+}
+.weather_content{
+    display: block;
+}
+.weather_items{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+.weather_item{
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    width: 120px;
+    border: 1px solid var(--gary-100);
+    border-radius: 0.4rem;
+}
+.weather_item_img{
+    width: 40px;
+}
+.weather_item_text{
+    display: block;
+    margin-bottom: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.weather_days_dateTime{
+    display: block;
+    width: 100%;
+}
+.weather_dateTime{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--gary-100);
+}
+.date{
+    display: block;
+margin-bottom: 1rem;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 1.1rem;
+font-weight: 700;
+}
+.time{
+display: block;
+margin-bottom: 1rem;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 1.1rem;
+font-weight: 700;
+}
+.weather_days{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.days_item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    width: 90px;
+    height: 110px;
+    padding: 1rem;
+    border: 1px solid;
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+}
+.days_item_sky{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+font-size: 1.1rem;
+font-weight: 700;
+}
+.days_item_img{
+    display: block;
+}
+.days_item_time{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+font-size: 1rem;
+font-weight: 700;
+}
