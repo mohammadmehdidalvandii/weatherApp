@@ -1,6 +1,6 @@
 .weather{
     display: block;
-    width: 100%;
+    margin-bottom: 2rem;
 }
 .box_weather{
     display: block !important;
@@ -23,19 +23,17 @@
 }
 .weather_wrapper{
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    gap: 1rem;
+    align-items: center;
+    justify-content: center;
     margin-top: 1rem;
 }
 .weather_info{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    width: 100%;
+    gap: 2rem;
 }
 .weather_info_img{
-    width: 130px;
+    width:150px ;
     object-fit: cover;
 }
 .weather_info_content{
@@ -58,6 +56,7 @@ display: block;
 }
 .weather_content{
     display: block;
+    width: 100%;
 }
 .weather_items{
     display: flex;
@@ -85,7 +84,6 @@ display: block;
 
 .weather_days_dateTime{
     display: block;
-    width: 100%;
 }
 .weather_dateTime{
     display: flex;
@@ -142,4 +140,73 @@ font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
 font-size: 1rem;
 font-weight: 700;
+}
+.weather_error{
+    display: block;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    color: red;
+}
+
+@media only screen and (max-width: 1200px) {
+    .containers{
+        max-width: 960px;
+    }
+    
+    
+}
+@media only screen and (max-width: 1100px) {
+    .containers{
+        max-width: 960px;
+    }
+    .weather_dateTime{
+        display: block;
+    }
+    
+}
+@media only screen and (max-width: 992px) {
+    .containers{
+        max-width: 720px;
+    }
+    .weather_wrapper{
+        flex-direction: column;
+    }
+    .weather_info{
+        justify-content: center;
+    }
+    .weather_dateTime{
+        display: flex;
+    }
+    .weather_item{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .container{
+        max-width: 540px;
+    }
+    
+}
+@media only screen and (max-width: 576px) {
+    .containers{
+        max-width: 100%;
+    }
+    .weather_item{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 376px) {
+    .containers{
+        max-width: 100%;
+    }
+    .weather_items{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 70%;
+    }
+    .weather_item{
+        width: 100%;
+    }
 }

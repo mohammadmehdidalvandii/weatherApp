@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Weather.css'
 import { MdDeleteForever } from 'react-icons/md'
+import swal from 'sweetalert';
 
 function Weather() {
     const [weatherData , setWeatherData] = useState(null);
@@ -8,7 +9,21 @@ function Weather() {
     const [currentTime, setCurrentTime] = useState(''); 
     const [currentDate, setCurrentDate] = useState('');
 
-    console.log("forecastData" , forecastData?.list.slice(0,10))
+    console.log("forecastData" , weatherData)
+    // Removed handler City 
+    const handlerRemovedCity = ()=>{
+        swal({
+            title:"Are you sure to remove the city?",
+            icon:"error",
+            buttons:["no","yes"]
+        }).then((result)=>{
+            if(result){
+                localStorage.clear("weatherData");
+                localStorage.clear("forecastData");
+                window.location.reload()
+            }
+        })
+    }
 
     // UseEffect get weather data 
     useEffect(()=>{
@@ -35,10 +50,14 @@ function Weather() {
     },[])
 
   return (
-    <section className="weather">
+   <section className="weather">
         <div className="container">
             <div className="box box_weather">
-                    <span className="weather_removed">
+                {weatherData ?(
+                        <>
+                                    <span className="weather_removed"
+                        onClick={handlerRemovedCity}
+                    >
                         <MdDeleteForever/>
                     </span>
                 <div className="weather_wrapper">
@@ -63,6 +82,7 @@ function Weather() {
                                 <span className="weather_item_text">wind:</span>
                                 <span className="weather_item_text">{weatherData?.wind?.speed} km</span>
                             </li>
+                          
                         </ul>
                         <ul className="weather_items">
                             <li className="weather_item">
@@ -93,9 +113,14 @@ function Weather() {
                         </div>
                     </div>
                 </div>
+                        </>
+                ) :(
+                    <h2 className="weather_error">Currently there is no city</h2>
+                )}
             </div>
         </div>
     </section>
+  
   )
 }
 
