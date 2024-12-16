@@ -7,6 +7,7 @@ function Search() {
   const [isLoading , setIsLoading] = useState(false);
   const [city , setCity] = useState("");
   const key_api = "e71388857ca1f6798e51fed62c6c3a39";
+  
 
   const handlerSearchCity = async ()=>{
     if (!city) {
@@ -18,6 +19,10 @@ function Search() {
       return; // جلوگیری از ادامه تابع
   }
     setIsLoading(true);
+
+    localStorage.removeItem("weatherData");
+    localStorage.removeItem("forecastData");
+
      const res = await  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key_api}&units=metric`)
     if(res.status === 200){
       const weatherData = await res.json();
@@ -31,6 +36,7 @@ function Search() {
         setIsLoading(false);
       }
       setCity("")
+      window.location.reload()
       }else{
         setIsLoading(false)
         swal({
@@ -38,8 +44,8 @@ function Search() {
           icon:"error",
           buttons:"try again",
         })
+        setCity("")
     }
-    // console.log(`http://openweathermap.org/img/wn/${res.data.weather[0].icon}.png`)
   }
 
   return (
@@ -53,6 +59,7 @@ function Search() {
                 <button className="search_btn">Get Location</button>
               </div>
                 <input type="text" className="search_input"
+                placeholder='Type City name  <tehran>'
                 value={city}
                 onChange={e=>setCity(e.target.value)}
                 />
