@@ -9,6 +9,13 @@ function Weather() {
     const [currentTime, setCurrentTime] = useState(''); 
     const [currentDate, setCurrentDate] = useState('');
 
+          // clear Data LocalStorage 10min
+          setTimeout(() => {
+            localStorage.removeItem("weatherData");
+            localStorage.removeItem("forecastData");
+            window.location.reload()
+          }, 1000*60*10);
+
     // Removed handler City 
     const handlerRemovedCity = ()=>{
         swal({

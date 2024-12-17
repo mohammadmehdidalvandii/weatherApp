@@ -35,11 +35,6 @@ function Search() {
         localStorage.setItem("forecastData" , JSON.stringify(forecastData))
         setIsLoading(false);
       }
-      // clear Data LocalStorage 10min
-      setTimeout(() => {
-        localStorage.removeItem("weatherData");
-        localStorage.removeItem("forecastData");
-      }, 1000*60*10);
       setCity("")
       window.location.reload()
       }else{
