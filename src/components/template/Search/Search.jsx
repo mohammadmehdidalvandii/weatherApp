@@ -7,6 +7,15 @@ function Search() {
   const [isLoading , setIsLoading] = useState(false);
   const [city , setCity] = useState("");
   const key_api = "e71388857ca1f6798e51fed62c6c3a39";
+
+  
+  const handlerGetLocation = () => {
+    swal({
+      title:"This feature is under development",
+      icon:"warning",
+      buttons:"ok"
+    })
+  }
   
 
   const handlerSearchCity = async ()=>{
@@ -56,7 +65,9 @@ function Search() {
                 <button className="search_btn" 
                 onClick={handlerSearchCity}
                 >Search</button>
-                <button className="search_btn">Get Location</button>
+                <button className="search_btn"
+                onClick={handlerGetLocation}
+                >Get Location</button>
               </div>
                 <input type="text" className="search_input"
                 placeholder='Type City name  <tehran>'
