@@ -40,7 +40,7 @@ function Search() {
       }else{
         setIsLoading(false)
         swal({
-          title:"This city does not exist",
+          title:"Not Found City",
           icon:"error",
           buttons:"try again",
         })

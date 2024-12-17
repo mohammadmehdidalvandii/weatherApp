@@ -9,7 +9,6 @@ function Weather() {
     const [currentTime, setCurrentTime] = useState(''); 
     const [currentDate, setCurrentDate] = useState('');
 
-    console.log("forecastData" , weatherData)
     // Removed handler City 
     const handlerRemovedCity = ()=>{
         swal({
